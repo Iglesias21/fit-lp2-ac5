@@ -558,7 +558,7 @@ class Agenda:
             expContatos.append(contato.create_dump())
 
         arquivo = open(nome_arquivo, 'w')
-        arquivo.write(json.dumps(expContatos, default=dumper, indent=4, ensure_ascii=True))
+        arquivo.write(json.dumps(expContatos, default=dumper, indent=4, ensure_ascii=False))
 
 
     def carregar_contatos(self, nome_arquivo: str) -> None:
